@@ -10,6 +10,71 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
+&lt { quick-tap-ms = <200>; };
+
+/ {
+    behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "homerow_mods";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        escape {
+            bindings = <&kp ESCAPE>;
+            key-positions = <1 2>;
+        };
+
+        semi {
+            bindings = <&kp SEMICOLON>;
+            key-positions = <33 32>;
+        };
+
+        hyper {
+            bindings = <&kp RC(RS(RA(RGUI)))>;
+            key-positions = <39 40 41>;
+        };
+    };
+
+    macros {
+        screenshot: screenshot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LGUI &kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp NUMBER_4>,
+                <&macro_release>,
+                <&kp LGUI &kp LCTRL &kp LSHFT>;
+
+            label = "SCREENSHOT";
+        };
+
+        video: video {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LGUI &kp LSHFT>,
+                <&macro_tap>,
+                <&kp N5>,
+                <&macro_release>,
+                <&kp LGUI &kp LSHFT>;
+
+            label = "VIDEO";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
