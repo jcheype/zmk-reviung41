@@ -100,7 +100,7 @@
             //                       |     |     | RET | ADJ |     |
 
             bindings = <
-&trans  &kp EXCL   &kp AT    &kp HASH  &kp DLLR  &kp PRCNT           &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR   &kp RPAR   &kp DEL
+&trans  &kp EXCL   &kp AT    &kp HASH  &kp DLLR  &kp PRCNT           &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR   &kp RPAR   &kp EQUAL
 &trans  &kp UNDER  &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE            &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT  &kp GRAVE  &kp TILDE
 &trans  &kp ESC    &kp LGUI  &kp LALT  &kp CLCK  &kp DQT             &kp HOME   &kp END   &kp PG_UP  &kp PG_DN  &kp PSCRN  &mt RSHFT SPACE
                              &trans    &trans               &kp RET             &mo 3     &trans
@@ -115,10 +115,10 @@
             //                       |     | ADJ | BSPC |    |     |
 
             bindings = <
-&trans  &kp N1     &kp N2     &kp N3    &kp N4    &kp N5              &kp N6  &kp N7  &kp N8  &kp N9   &kp N0   &kp DEL
-&trans  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT  &kp BSLH            &kp F1  &kp F2  &kp F3  &kp F4   &kp F5   &kp F6
-&trans  &kp ESC    &kp LGUI   &kp RALT  &kp CLCK  &kp DQT             &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-                              &trans    &mo 3               &kp BSPC          &trans  &trans
+&kp KP_PLUS      &kp KP_MULTIPLY  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp N5            &kp N6  &kp N7    &kp UP    &kp N9     &kp N0         &kp EQUAL
+&kp KP_SUBTRACT  &kp KP_DIVIDE    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp BSLH          &kp F1  &kp LEFT  &kp DOWN  &kp RIGHT  &kp F5         &kp F6
+&trans           &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DQT           &kp F7  &kp F8    &kp F9    &kp F10    &kp BACKSLASH  &kp F12
+                                                   &trans           &trans                     &trans          &trans    &trans
             >;
         };
 
@@ -132,7 +132,7 @@
             bindings = <
 &rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF  &none   &rgb_ug RGB_TOG          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
 &rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR  &none   &none                    &none         &none         &none         &none         &none         &none
-&none            &none            &none            &none            &none   &none                    &sys_reset    &none         &none         &none         &none         &none
+&none            &none            &none            &none            &none   &none                    &sys_reset    &none         &none         &none         &video        &screenshot
                                                    &trans           &trans                   &tog 3                &trans        &trans
             >;
         };
